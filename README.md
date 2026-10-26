@@ -1,6 +1,6 @@
 # passive-lipo-balancer-nano
 
-A proof-of-concept passive LiPo cell balancer based on Arduino Nano.
+A proof-of-technology passive LiPo cell balancer based on Arduino Nano.
 
 This project monitors individual battery cell voltages and performs passive balancing by selectively discharging cells through resistors. It is intended for educational, research, and hobby robotics applications.
 
