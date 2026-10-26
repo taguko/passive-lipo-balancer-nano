@@ -31,7 +31,7 @@ The goal of this project is to provide a simple and easy-to-understand platform 
 - MOSFETs for discharge control
 - Discharge resistors
 - Battery balance connector
-- Status LEDs (optional)
+- Status OLED (optional)
 
 ## Operating Modes
 
