@@ -11,8 +11,6 @@ The firmware currently focuses on two practical operating modes:
 
 The goal of this project is to provide a simple and easy-to-understand platform for learning battery management and cell balancing techniques.
 
----
-
 ## Features
 
 - Individual cell voltage monitoring
@@ -23,8 +21,6 @@ The goal of this project is to provide a simple and easy-to-understand platform 
 - Simple and low-cost hardware implementation
 - Open-source hardware and firmware
 - Suitable for Li-ion and LiPo battery packs
-
----
 
 ## Hardware
 
@@ -51,8 +47,6 @@ Balance Mode reduces voltage differences between cells.
 
 The firmware identifies the cell with the lowest voltage and selectively discharges higher-voltage cells until all cells reach approximately the same voltage.
 
----
-
 ## Safety Notice
 
 This project works directly with rechargeable lithium-based batteries.
@@ -68,23 +62,17 @@ Always:
 
 The author assumes no responsibility for any damage, injury, or loss resulting from the use of this project.
 
----
-
 ## Project Status
 
 ⚠️ This is an experimental proof-of-concept project.
 
 The hardware and firmware are under active development and should not be considered a certified battery management system (BMS).
 
----
-
 ## Contributing
 
 Contributions, bug reports, and suggestions are welcome.
 
 Feel free to open an issue or submit a pull request.
-
----
 
 ## License
 
