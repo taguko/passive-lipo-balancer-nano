@@ -31,15 +31,6 @@ Improper handling of Li-ion or LiPo batteries may result in overheating, fire, p
 
 The author assumes no responsibility for any damage, injury, or loss resulting from the use of this project.
 
-## Roadmap
-
-- Support for additional cell counts
-- OLED status display
-- Serial monitoring interface
-- Data logging capabilities
-- Automatic storage-voltage discharge mode
-- Improved balancing algorithms
-
 ## Contributing
 
 Contributions, bug reports, and suggestions are welcome. Feel free to open an issue or submit a pull request.
