@@ -64,7 +64,7 @@ The author assumes no responsibility for any damage, injury, or loss resulting f
 
 ## Project Status
 
-⚠️ This is an experimental proof-of-concept project.
+⚠️ This is an experimental proof-of-technology project.
 
 The hardware and firmware are under active development and should not be considered a certified battery management system (BMS).
 
