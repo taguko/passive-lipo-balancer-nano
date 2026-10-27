@@ -1,4 +1,4 @@
-// 
+// OLED Display
 
 void oled_setup() {
   // Wait for display
@@ -13,5 +13,25 @@ void oled_setup() {
   display.display();
 }
 
-void oled_handle() {
+void oled_voltage_handle() {
+  display.ssd1306_command(SSD1306_DISPLAYOFF);
+
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+  display.setTextSize(1);
+
+  String info;
+  display.setCursor(0, 0);
+  info = "V_Cell1:" + String(voltage_cell[0]) + "V";
+  display.println(info);
+  display.setCursor(0, 10);
+  info = "V_Cell2:" + String(voltage_cell[1]) + "V";
+  display.println(info);
+  display.setCursor(0, 20);
+  info = "V_Cell3:" + String(voltage_cell[2]) + "V";
+  display.println(info);
+
+  display.display();
+
+  display.ssd1306_command(SSD1306_DISPLAYON);
 }
