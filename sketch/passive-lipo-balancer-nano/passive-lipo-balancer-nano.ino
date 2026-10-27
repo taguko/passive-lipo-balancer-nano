@@ -57,17 +57,24 @@ void loop() {
   voltage_cell[0] = mapf(analogRead(V_Cell1), 0, 1023, 0, 1.1) / Voltage_division_ratio;
   voltage_cell[1] = (mapf(analogRead(V_Cell2), 0, 1023, 0, 1.1) / Voltage_division_ratio) - voltage_cell[0];
   voltage_cell[2] = (mapf(analogRead(V_Cell3), 0, 1023, 0, 1.1) / Voltage_division_ratio) - (voltage_cell[0] + voltage_cell[1]);
-  serial_voltage_handle();
-  oled_voltage_handle();
+  serial_handle();
+  oled_handle();
 
-  // Made choose
+  // Mode choose & run discharge
   if (digitalRead(SW1) == HIGH)
     Storage_discharge();
   else
     Balance_discharge();
+
+  // Wait
+  delay(20);
 }
 
-void serial_voltage_handle() {
+void serial_handle() {
+  if (digitalRead(SW1) == HIGH)
+    Serial.println("Balance mode");
+  else
+    Serial.println("Strage mode");
   String info;
   info = "V_Cell1:" + String(voltage_cell[0]) + "V";
   display.println(info);
@@ -75,25 +82,6 @@ void serial_voltage_handle() {
   display.println(info);
   info = "V_Cell3:" + String(voltage_cell[2]) + "V";
   display.println(info);
-}
-
-void Storage_discharge() {
-  bool run_flag = false;
-  for (int i = 0; i < 3; i++) {
-    if (3.8 < voltage_cell[i])
-      run_flag = true;
-  }
-
-  if (run_flag) {
-    digitalWrite(LED_BUILTIN, HIGH);
-    digitalWrite(Sink_Cell1, HIGH);
-    digitalWrite(Sink_Cell2, HIGH);
-    digitalWrite(Sink_Cell3, HIGH);
-    delay(20);
-  }
-}
-
-void Balance_discharge() {
 }
 
 float mapf(float x, float in_min, float in_max,

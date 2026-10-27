@@ -13,7 +13,7 @@ void oled_setup() {
   display.display();
 }
 
-void oled_voltage_handle() {
+void oled_handle() {
   display.ssd1306_command(SSD1306_DISPLAYOFF);
 
   display.clearDisplay();
@@ -22,12 +22,19 @@ void oled_voltage_handle() {
 
   String info;
   display.setCursor(0, 0);
+  if (digitalRead(SW1) == HIGH)
+    info = "Balance mode";
+  else
+    info = "Storage mode";
+  display.println(info);
+
+  display.setCursor(0, 10);
   info = "V_Cell1:" + String(voltage_cell[0]) + "V";
   display.println(info);
-  display.setCursor(0, 10);
+  display.setCursor(0, 20);
   info = "V_Cell2:" + String(voltage_cell[1]) + "V";
   display.println(info);
-  display.setCursor(0, 20);
+  display.setCursor(0, 30);
   info = "V_Cell3:" + String(voltage_cell[2]) + "V";
   display.println(info);
 
