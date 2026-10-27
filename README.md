@@ -33,6 +33,9 @@ The goal of this project is to provide a simple and easy-to-understand platform 
 - Battery balance connector
 - Status OLED (optional)
 
+### BOM
+[PartsCabi.net](https://partscabi.net/list/e6f96d02-e6a8-4c4d-9230-7bf2f09aacb4)
+
 ## Operating Modes
 
 ### Storage Mode
