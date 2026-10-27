@@ -5,9 +5,11 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+const float allowable_error = 0.005;
+
 const float R1 = 100000;
 const float R2 = 8200;
-const float Voltage_division_ratio = R2 / (R2 + R1);
+const float voltage_division_ratio = R2 / (R2 + R1);
 
 const int SW1 = 8;
 
@@ -54,9 +56,9 @@ void loop() {
   digitalWrite(Sink_Cell3, LOW);
 
   // Voltage check
-  voltage_cell[0] = mapf(analogRead(V_Cell1), 0, 1023, 0, 1.1) / Voltage_division_ratio;
-  voltage_cell[1] = (mapf(analogRead(V_Cell2), 0, 1023, 0, 1.1) / Voltage_division_ratio) - voltage_cell[0];
-  voltage_cell[2] = (mapf(analogRead(V_Cell3), 0, 1023, 0, 1.1) / Voltage_division_ratio) - (voltage_cell[0] + voltage_cell[1]);
+  voltage_cell[0] = mapf(analogRead(V_Cell1), 0, 1023, 0, 1.1) / voltage_division_ratio;
+  voltage_cell[1] = (mapf(analogRead(V_Cell2), 0, 1023, 0, 1.1) / voltage_division_ratio) - voltage_cell[0];
+  voltage_cell[2] = (mapf(analogRead(V_Cell3), 0, 1023, 0, 1.1) / voltage_division_ratio) - (voltage_cell[0] + voltage_cell[1]);
   serial_handle();
   oled_handle();
 

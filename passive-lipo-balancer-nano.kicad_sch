@@ -8,6 +8,193 @@
 		(date "2026-10-27")
 	)
 	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x03"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x03_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016)
@@ -2203,9 +2390,19 @@
 		)
 		(uuid "48762e5e-09c7-434d-8858-989988d44943")
 	)
-	(text "ストレージモード（すべてのセルを3.8Vまで放電）と\nバランスモード（一番電圧の低いセルと同じ電圧まで放電）の切り替え"
+	(text "バランスコネクタ"
 		(exclude_from_sim no)
-		(at 20.066 44.196 0)
+		(at 237.49 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8548174d-8ba8-4f26-9d60-253e233a8b9a")
+	)
+	(text "ストレージモード/バランスモード"
+		(exclude_from_sim no)
+		(at 34.29 48.768 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2222,6 +2419,26 @@
 			)
 		)
 		(uuid "b1387a4a-7fb2-4114-ba62-eca9ea7e765a")
+	)
+	(text_box "ストレージモード：すべてのセルを3.8Vまで放電\nバランスモード：一番電圧の低いセルと同じ電圧まで放電"
+		(exclude_from_sim no)
+		(at 132.08 190.8571 0)
+		(size 43.18 5.9929)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "166abe65-5f6d-4fba-b3c8-5e0469b32ef8")
 	)
 	(text_box "I\n= 4.2V / 33Ω\n≒ 0.127A\n\nP\n= 0.127A * 0.127A * 33Ω\n≒ 0.532W"
 		(exclude_from_sim no)
@@ -2265,7 +2482,7 @@
 	)
 	(text_box "100kΩと8.2kΩの合成抵抗は\n(100k * 8.2k) / (100k + 8.2k)\n= 7.57855822551 ≒ 7.58kΩ\nインピーダンスは許容範囲(10kΩ)内\n\n分圧比は\nR2 / (R1 + R2)\n= 8.2 / 108.2\n= 0.0757855822551 ≒ 0.0758\n\nGND基準で考えると\nCell3 = 12.6V * 0.0758 ≒ 0.955V\nCell2 = 8.4V * 0.0758 ≒ 0.637V\nCell1 = 4.2V * 0.0758 ≒ 0.318V"
 		(exclude_from_sim no)
-		(at 199.39 63.4515 0)
+		(at 133.35 65.9915 0)
 		(size 36.83 30.5285)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -2283,7 +2500,7 @@
 		)
 		(uuid "7e4ba428-84f1-417a-a78d-70fa63937541")
 	)
-	(text_box "ADCは10bitだから\n1.1V / 1024\n≒ 1.07mV/LSB"
+	(text_box "ADCは10bitだから\n1.1V / 1023\n≒ 1.08mV/LSB"
 		(exclude_from_sim no)
 		(at 106.68 75.7824 0)
 		(size 17.78 8.0376)
@@ -2303,10 +2520,10 @@
 		)
 		(uuid "a531edfa-0ef8-4184-a4ed-82beaf5ff4ad")
 	)
-	(text_box "一番単純なプログラム\n\nはじめ\n↓\n放電FETすべてOFF　オンボードLED消灯\n↓\n電圧測定\n↓\nDIPスイッチからモード判別＆目標電圧決定\n↓\n必要なら放電開始　所定の放電FETをON　オンボードLED点灯\n（不要なら「はじめ」に戻る）\n↓\n数秒待つ\n↓\n「はじめ」に戻る"
+	(text_box "一番単純なプログラム\n\nはじめ\n↓\n放電FETすべてOFF　オンボードLED消灯\n↓\n電圧測定\n↓\nDIPスイッチからモード判別＆目標電圧決定\n↓\n必要なら放電開始　所定の放電FETをON　オンボードLED点灯\n↓\n数秒待つ\n↓\n「はじめ」に戻る"
 		(exclude_from_sim no)
-		(at 91.44 159.6923 0)
-		(size 53.34 34.6177)
+		(at 83.82 155.3869 0)
+		(size 53.34 32.5731)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -2350,7 +2567,7 @@
 		(uuid "0e973fba-77af-405c-9a2c-e4777b082337")
 	)
 	(junction
-		(at 168.91 48.26)
+		(at 149.86 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "13fd3cef-2e7c-49fc-89ae-2c0a96056099")
@@ -2368,7 +2585,7 @@
 		(uuid "2cfa27a8-40c5-47eb-b49a-4b74742b64cd")
 	)
 	(junction
-		(at 190.5 48.26)
+		(at 171.45 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "302a8989-86da-477f-b267-712e84346666")
@@ -2380,13 +2597,7 @@
 		(uuid "469b922e-cd2f-4d54-b48e-9b8126ec0954")
 	)
 	(junction
-		(at 168.91 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8e78d61c-7e80-49d7-831f-ad5dab8e73d8")
-	)
-	(junction
-		(at 147.32 48.26)
+		(at 128.27 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9bce8784-edde-4318-acf7-557d7610f239")
@@ -2410,16 +2621,16 @@
 		(uuid "b1bd8c52-5236-4340-901c-e2c44c11ad1a")
 	)
 	(junction
+		(at 266.7 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c5dd2a34-cb96-40c2-abdf-0c7210c2304e")
+	)
+	(junction
 		(at 152.4 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb1e75ba-fc8c-469d-b9ed-8702ecb3f81a")
-	)
-	(junction
-		(at 190.5 30.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eff5d8f2-48fe-4912-956d-f1e6438c3bd0")
 	)
 	(junction
 		(at 198.12 135.89)
@@ -2527,6 +2738,16 @@
 	)
 	(wire
 		(pts
+			(xy 266.7 86.36) (xy 266.7 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a0ed845-ca6d-4a9b-bb97-8255df838cdd")
+	)
+	(wire
+		(pts
 			(xy 88.9 63.5) (xy 91.44 63.5)
 		)
 		(stroke
@@ -2557,7 +2778,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 30.48) (xy 190.5 39.37)
+			(xy 171.45 27.94) (xy 171.45 30.48)
 		)
 		(stroke
 			(width 0)
@@ -2587,6 +2808,16 @@
 	)
 	(wire
 		(pts
+			(xy 266.7 96.52) (xy 266.7 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16037c17-6b74-4d7b-9b40-e8efd41f35f2")
+	)
+	(wire
+		(pts
 			(xy 246.38 25.4) (xy 266.7 25.4)
 		)
 		(stroke
@@ -2594,6 +2825,16 @@
 			(type default)
 		)
 		(uuid "2356729f-581f-4ba5-a457-84af671e0ed0")
+	)
+	(wire
+		(pts
+			(xy 199.39 25.4) (xy 201.93 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c009a86-93f7-4d5e-88dc-405d7481aa7c")
 	)
 	(wire
 		(pts
@@ -2617,7 +2858,17 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 48.26) (xy 147.32 46.99)
+			(xy 199.39 30.48) (xy 201.93 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35006526-f374-4b0d-8a3f-d1155e7f5e2c")
+	)
+	(wire
+		(pts
+			(xy 128.27 39.37) (xy 128.27 38.1)
 		)
 		(stroke
 			(width 0)
@@ -2627,7 +2878,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 48.26) (xy 168.91 48.26)
+			(xy 148.59 39.37) (xy 149.86 39.37)
 		)
 		(stroke
 			(width 0)
@@ -2637,7 +2888,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 48.26) (xy 190.5 46.99)
+			(xy 171.45 39.37) (xy 171.45 38.1)
 		)
 		(stroke
 			(width 0)
@@ -2647,13 +2898,23 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 59.69) (xy 190.5 57.15)
+			(xy 171.45 50.8) (xy 171.45 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3b1add5b-1ce7-4318-be40-cbd77f898472")
+	)
+	(wire
+		(pts
+			(xy 246.38 73.66) (xy 257.81 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c663ab4-c236-4954-a998-78439e74cd3c")
 	)
 	(wire
 		(pts
@@ -2767,16 +3028,6 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 30.48) (xy 201.93 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ecf29ce-6c9c-490c-b40c-a91330b40008")
-	)
-	(wire
-		(pts
 			(xy 77.47 80.01) (xy 76.2 80.01)
 		)
 		(stroke
@@ -2787,23 +3038,13 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 39.37) (xy 147.32 25.4)
+			(xy 128.27 30.48) (xy 128.27 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "62c1c961-bd82-4f2a-9f57-7bce17e12393")
-	)
-	(wire
-		(pts
-			(xy 187.96 30.48) (xy 190.5 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62e3d281-3303-4372-8cb3-ebdc2dd7458f")
 	)
 	(wire
 		(pts
@@ -2817,13 +3058,33 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 49.53) (xy 147.32 48.26)
+			(xy 199.39 33.02) (xy 201.93 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68a1d656-dd04-4ea2-bb86-d85968f101c1")
+	)
+	(wire
+		(pts
+			(xy 128.27 40.64) (xy 128.27 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6962d41a-24e8-417a-b116-040332ed071e")
+	)
+	(wire
+		(pts
+			(xy 199.39 73.66) (xy 201.93 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "696eac07-7c23-407f-9e05-ab24bfa53306")
 	)
 	(wire
 		(pts
@@ -2927,13 +3188,23 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 49.53) (xy 190.5 48.26)
+			(xy 171.45 40.64) (xy 171.45 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7d57b119-888f-4bd4-a52c-27e8d7308e69")
+	)
+	(wire
+		(pts
+			(xy 257.81 73.66) (xy 257.81 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e06a9b7-b6be-4809-824a-f16d9b6e01a4")
 	)
 	(wire
 		(pts
@@ -2954,6 +3225,16 @@
 			(type default)
 		)
 		(uuid "84ecc67a-7df6-4715-9d3d-1a8c7cea54ce")
+	)
+	(wire
+		(pts
+			(xy 199.39 76.2) (xy 199.39 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "850f2cf0-ccc1-45ca-b30c-19809ae648d3")
 	)
 	(wire
 		(pts
@@ -2997,7 +3278,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 59.69) (xy 147.32 57.15)
+			(xy 128.27 50.8) (xy 128.27 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3014,6 +3295,16 @@
 			(type default)
 		)
 		(uuid "8bd08837-f581-47a2-a0f3-94016953ed60")
+	)
+	(wire
+		(pts
+			(xy 199.39 27.94) (xy 201.93 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cb07e56-b7a2-489f-b3be-cf62248e4c4c")
 	)
 	(wire
 		(pts
@@ -3047,7 +3338,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 49.53) (xy 168.91 48.26)
+			(xy 149.86 40.64) (xy 149.86 39.37)
 		)
 		(stroke
 			(width 0)
@@ -3057,7 +3348,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 48.26) (xy 147.32 48.26)
+			(xy 127 39.37) (xy 128.27 39.37)
 		)
 		(stroke
 			(width 0)
@@ -3084,6 +3375,16 @@
 			(type default)
 		)
 		(uuid "95c5b5f0-b471-412e-b27b-62801b6056be")
+	)
+	(wire
+		(pts
+			(xy 266.7 68.58) (xy 266.7 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9856bfd6-06de-4dc2-86e6-4d454b3f5016")
 	)
 	(wire
 		(pts
@@ -3127,17 +3428,17 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 27.94) (xy 168.91 27.94)
+			(xy 246.38 71.12) (xy 260.35 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a04257f4-73d7-4966-80f2-b6f7a086f584")
+		(uuid "9f317f4a-cdb2-47a9-99c5-bc0a9dcd770e")
 	)
 	(wire
 		(pts
-			(xy 168.91 39.37) (xy 168.91 27.94)
+			(xy 149.86 30.48) (xy 149.86 27.94)
 		)
 		(stroke
 			(width 0)
@@ -3167,6 +3468,26 @@
 	)
 	(wire
 		(pts
+			(xy 266.7 87.63) (xy 266.7 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a95f99f3-2e65-4225-a266-6a7af7ed6366")
+	)
+	(wire
+		(pts
+			(xy 199.39 71.12) (xy 201.93 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af2d223c-4530-40d8-83a8-6efa9c46c2cf")
+	)
+	(wire
+		(pts
 			(xy 262.89 35.56) (xy 266.7 35.56)
 		)
 		(stroke
@@ -3187,7 +3508,17 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 48.26) (xy 168.91 46.99)
+			(xy 260.35 86.36) (xy 266.7 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b27928a4-9aa4-4868-813b-334b0f815053")
+	)
+	(wire
+		(pts
+			(xy 149.86 39.37) (xy 149.86 38.1)
 		)
 		(stroke
 			(width 0)
@@ -3227,13 +3558,23 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 59.69) (xy 168.91 57.15)
+			(xy 149.86 50.8) (xy 149.86 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "be8488be-f2b1-469a-b3a2-54d7635f47b7")
+	)
+	(wire
+		(pts
+			(xy 257.81 96.52) (xy 266.7 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be9f6308-fad2-48a4-81b9-8358ac7c5ae5")
 	)
 	(wire
 		(pts
@@ -3257,6 +3598,16 @@
 	)
 	(wire
 		(pts
+			(xy 260.35 71.12) (xy 260.35 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c314ae09-d449-458c-a426-67e5a122f260")
+	)
+	(wire
+		(pts
 			(xy 246.38 30.48) (xy 260.35 30.48)
 		)
 		(stroke
@@ -3267,7 +3618,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 48.26) (xy 190.5 48.26)
+			(xy 170.18 39.37) (xy 171.45 39.37)
 		)
 		(stroke
 			(width 0)
@@ -3287,13 +3638,13 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 25.4) (xy 201.93 25.4)
+			(xy 199.39 35.56) (xy 199.39 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cff0d054-bd97-4045-a382-9cb8d03513a9")
+		(uuid "d29014d6-8fcc-43fe-9578-dd45e7faf48c")
 	)
 	(wire
 		(pts
@@ -3304,6 +3655,16 @@
 			(type default)
 		)
 		(uuid "d7dca646-a5e3-4b33-818c-b6f77ad10791")
+	)
+	(wire
+		(pts
+			(xy 199.39 68.58) (xy 201.93 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d81574bd-2b2d-4cbc-b693-8f02d37d00ac")
 	)
 	(wire
 		(pts
@@ -3357,6 +3718,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 68.58) (xy 266.7 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea6c4544-908d-4e5a-ae58-7e218ebed7cf")
+	)
+	(wire
+		(pts
 			(xy 77.47 80.01) (xy 78.74 80.01)
 		)
 		(stroke
@@ -3364,16 +3735,6 @@
 			(type default)
 		)
 		(uuid "ea752e8b-c127-4858-a2cd-78ae930f8e1a")
-	)
-	(wire
-		(pts
-			(xy 168.91 27.94) (xy 201.93 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2832685-806e-4e19-be25-e78995d6f30b")
 	)
 	(wire
 		(pts
@@ -3457,7 +3818,7 @@
 	)
 	(global_label "V_Cell1"
 		(shape output)
-		(at 189.23 48.26 180)
+		(at 170.18 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3467,7 +3828,7 @@
 		)
 		(uuid "187b9310-04e4-4a9e-a449-400dfe474511")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.2901 48.26 0)
+			(at 160.2401 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3503,6 +3864,54 @@
 			)
 		)
 	)
+	(global_label "Cell1+"
+		(shape output)
+		(at 199.39 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "33f9b6f0-064f-4c68-9c57-f5e0c599ebf5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 189.9339 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "Cell3+"
+		(shape input)
+		(at 171.45 27.94 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "39a46cf5-991b-407a-9a86-9f5741b4759d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 171.45 18.4839 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SCL"
 		(shape input)
 		(at 30.48 165.1 180)
@@ -3527,9 +3936,9 @@
 			)
 		)
 	)
-	(global_label "Cell2-"
+	(global_label "Cell1+"
 		(shape output)
-		(at 187.96 30.48 180)
+		(at 199.39 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3539,7 +3948,7 @@
 		)
 		(uuid "4b3ff8a3-6bdd-4b88-b83c-8893d1389821")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.5039 30.48 0)
+			(at 189.9339 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3577,7 +3986,7 @@
 	)
 	(global_label "V_Cell2"
 		(shape output)
-		(at 167.64 48.26 180)
+		(at 148.59 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3587,31 +3996,7 @@
 		)
 		(uuid "509fb30c-2071-42bb-8a8b-bda9d329371e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.7001 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "Cell1-"
-		(shape output)
-		(at 201.93 33.02 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "50c0817c-2b1f-4aaf-9ba0-d9a4625afa54")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 192.4739 33.02 0)
+			(at 138.6501 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3695,6 +4080,30 @@
 			)
 		)
 	)
+	(global_label "Cell3+"
+		(shape output)
+		(at 199.39 25.4 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "89df3851-f8be-47af-97b8-6dc1ea60cd65")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 189.9339 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "Sink_Cell3"
 		(shape input)
 		(at 240.03 135.89 180)
@@ -3743,6 +4152,30 @@
 			)
 		)
 	)
+	(global_label "Cell2+"
+		(shape output)
+		(at 199.39 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "99f215f6-7646-48e1-80cb-7d674d331ecd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 189.9339 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "V_Cell3"
 		(shape input)
 		(at 46.99 110.49 90)
@@ -3767,7 +4200,7 @@
 			)
 		)
 	)
-	(global_label "Cell2-"
+	(global_label "Cell2+"
 		(shape input)
 		(at 209.55 119.38 90)
 		(fields_autoplaced yes)
@@ -3839,9 +4272,9 @@
 			)
 		)
 	)
-	(global_label "Cell3-"
+	(global_label "Cell2+"
 		(shape output)
-		(at 166.37 27.94 180)
+		(at 199.39 27.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3851,7 +4284,7 @@
 		)
 		(uuid "bb58033d-d157-44a0-9bdf-4478230aa58c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.9139 27.94 0)
+			(at 189.9339 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3913,7 +4346,7 @@
 	)
 	(global_label "V_Cell3"
 		(shape output)
-		(at 146.05 48.26 180)
+		(at 127 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3923,7 +4356,7 @@
 		)
 		(uuid "ca79ef4a-478f-4df4-8381-3c025ae4bf61")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 136.1101 48.26 0)
+			(at 117.0601 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3959,7 +4392,7 @@
 			)
 		)
 	)
-	(global_label "Cell3-"
+	(global_label "Cell3+"
 		(shape input)
 		(at 265.43 119.38 90)
 		(fields_autoplaced yes)
@@ -3983,7 +4416,7 @@
 			)
 		)
 	)
-	(global_label "Cell1-"
+	(global_label "Cell1+"
 		(shape input)
 		(at 152.4 119.38 90)
 		(fields_autoplaced yes)
@@ -3996,6 +4429,30 @@
 		(uuid "dd79c233-cce4-4325-92d0-8b021e99aaf7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 152.4 109.9239 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "Cell1+"
+		(shape input)
+		(at 128.27 27.94 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e4b2d213-7181-47a8-95e1-32b5f320945a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 128.27 18.4839 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4053,6 +4510,49 @@
 				)
 				(justify right)
 			)
+		)
+	)
+	(global_label "Cell2+"
+		(shape input)
+		(at 149.86 27.94 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ff0b2a13-afcb-4c22-9d5e-1e6fb80a414e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 18.4839 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(rule_area
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
+		(polyline
+			(pts
+				(xy 224.79 60.96) (xy 224.79 99.06) (xy 279.4 99.06) (xy 279.4 60.96)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid "416ee175-978f-4ff2-abcc-2313b1f85847")
 		)
 	)
 	(rule_area
@@ -4248,7 +4748,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a93e33c-4213-48a6-b8a7-208d13826a5b")
-		(property "Reference" "R2"
+		(property "Reference" "R4"
 			(at 143.51 143.5099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4312,7 +4812,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "R2")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -4489,8 +4989,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 190.5 43.18 0)
+		(lib_id "power:GND")
+		(at 199.39 35.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4499,31 +4999,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "29216732-6630-49f7-bdf7-a3eb1d5ffaf6")
-		(property "Reference" "R8"
-			(at 193.04 41.9099 0)
+		(uuid "19b5f490-12f6-45d8-854a-d1c13ec68a59")
+		(property "Reference" "#PWR013"
+			(at 199.39 41.91 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "100kΩ"
-			(at 193.04 44.4499 0)
+		(property "Value" "GND"
+			(at 199.39 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 188.722 43.18 90)
+			(at 199.39 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4534,7 +5033,169 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 43.18 0)
+			(at 199.39 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 199.39 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d9f4fe23-ee7e-425c-bbd8-9a50f6dca43c")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 266.7 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "244474c2-be7c-4930-b000-97aa458905b9")
+		(property "Reference" "C8"
+			(at 270.51 90.1699 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Cell1"
+			(at 270.51 92.7099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 267.6652 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 266.7 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e4a5dfb9-57b4-42c6-b81d-062e47a77d74")
+		)
+		(pin "1"
+			(uuid "5967a1e9-e2d5-4b67-90cf-2f48858b917c")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 171.45 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "29216732-6630-49f7-bdf7-a3eb1d5ffaf6")
+		(property "Reference" "R8"
+			(at 173.99 33.0199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100kΩ"
+			(at 173.99 35.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 169.672 34.29 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4545,7 +5206,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 190.5 43.18 0)
+			(at 171.45 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4565,6 +5226,90 @@
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 207.01 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "299dcc44-1138-45de-87e1-7b1b5400efeb")
+		(property "Reference" "J2"
+			(at 209.55 69.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 209.55 72.3899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_S3B-XH-A_1x03_P2.50mm_Horizontal"
+			(at 207.01 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 207.01 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d71fda88-0d76-4de3-a886-4d4b58f5fea8")
+		)
+		(pin "3"
+			(uuid "0ae364a7-fa6e-4908-919c-d9614c7e25c3")
+		)
+		(pin "2"
+			(uuid "c969b687-444a-4c9c-ab98-73289154408b")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -4985,6 +5730,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 241.3 71.12 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "41841256-14e3-4619-8986-579ed98cc82e")
+		(property "Reference" "J4"
+			(at 238.76 69.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 238.76 72.3899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_S3B-XH-A_1x03_P2.50mm_Horizontal"
+			(at 241.3 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 241.3 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f4932b02-c220-489d-9f3d-21800e561829")
+		)
+		(pin "3"
+			(uuid "ba95aad7-cdc3-4cd2-8271-3852ffbd72d0")
+		)
+		(pin "2"
+			(uuid "cd502720-3036-45f6-b713-318f1f48c624")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 241.3 27.94 0)
 		(mirror y)
@@ -4996,7 +5826,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "447b58ef-8002-411f-b9ab-95e3dd278fc9")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 238.76 27.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5066,7 +5896,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -5084,7 +5914,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4486a8b4-a471-4073-8aea-6a79809f9dd7")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR015"
 			(at 209.55 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -5144,7 +5974,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "#PWR013")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -5152,7 +5982,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 168.91 59.69 0)
+		(at 149.86 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5162,8 +5992,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "478c134b-5d28-4455-ae61-3b00b1c8bc55")
-		(property "Reference" "#PWR011"
-			(at 168.91 66.04 0)
+		(property "Reference" "#PWR010"
+			(at 149.86 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5174,7 +6004,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 168.91 64.77 0)
+			(at 149.86 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5184,7 +6014,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 168.91 59.69 0)
+			(at 149.86 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5195,7 +6025,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 59.69 0)
+			(at 149.86 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5206,7 +6036,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 168.91 59.69 0)
+			(at 149.86 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5222,7 +6052,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "#PWR011")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -5312,7 +6142,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 147.32 43.18 0)
+		(at 128.27 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5322,8 +6152,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5355737f-2910-4931-b573-ec6c23a33f2f")
-		(property "Reference" "R3"
-			(at 149.86 41.9099 0)
+		(property "Reference" "R1"
+			(at 130.81 33.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5334,7 +6164,7 @@
 			)
 		)
 		(property "Value" "100kΩ"
-			(at 149.86 44.4499 0)
+			(at 130.81 35.5599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5345,7 +6175,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 145.542 43.18 90)
+			(at 126.492 34.29 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5356,7 +6186,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 43.18 0)
+			(at 128.27 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5367,7 +6197,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 147.32 43.18 0)
+			(at 128.27 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5386,7 +6216,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "R3")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5394,7 +6224,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 190.5 59.69 0)
+		(at 171.45 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5405,7 +6235,7 @@
 		(fields_autoplaced yes)
 		(uuid "53d65db8-a3d7-49b2-bcf9-2a66692ae168")
 		(property "Reference" "#PWR012"
-			(at 190.5 66.04 0)
+			(at 171.45 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5416,7 +6246,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.5 64.77 0)
+			(at 171.45 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5426,7 +6256,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 59.69 0)
+			(at 171.45 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5437,7 +6267,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 59.69 0)
+			(at 171.45 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5448,7 +6278,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 59.69 0)
+			(at 171.45 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5472,7 +6302,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 190.5 53.34 0)
+		(at 171.45 44.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5483,7 +6313,7 @@
 		(fields_autoplaced yes)
 		(uuid "5467b0fd-4838-459b-8cbf-a961753638fc")
 		(property "Reference" "R9"
-			(at 193.04 52.0699 0)
+			(at 173.99 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5494,7 +6324,7 @@
 			)
 		)
 		(property "Value" "8k2Ω"
-			(at 193.04 54.6099 0)
+			(at 173.99 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5505,7 +6335,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 188.722 53.34 90)
+			(at 169.672 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5516,7 +6346,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 53.34 0)
+			(at 171.45 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5527,7 +6357,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 190.5 53.34 0)
+			(at 171.45 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5804,7 +6634,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "71955a8a-5e96-4898-ad7d-fd7f1204b08b")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR016"
 			(at 265.43 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -5864,7 +6694,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "#PWR014")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -6121,6 +6951,89 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 266.7 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "84e3eae5-e4ae-4148-8878-02389c3e52bc")
+		(property "Reference" "C7"
+			(at 270.51 80.0099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Cell2"
+			(at 270.51 82.5499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 267.6652 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 266.7 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9d5af6f2-19c4-4e45-be8d-1e7c6c4cc779")
+		)
+		(pin "1"
+			(uuid "0eac02d9-61f8-4771-92ae-4bd9681fc787")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 43.18 156.21 0)
 		(unit 1)
@@ -6200,7 +7113,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 147.32 59.69 0)
+		(at 128.27 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6211,7 +7124,7 @@
 		(fields_autoplaced yes)
 		(uuid "9322dbb2-ca2e-40c0-868b-fb3d9978a33d")
 		(property "Reference" "#PWR09"
-			(at 147.32 66.04 0)
+			(at 128.27 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6222,7 +7135,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 147.32 64.77 0)
+			(at 128.27 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6232,7 +7145,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 59.69 0)
+			(at 128.27 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6243,7 +7156,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 59.69 0)
+			(at 128.27 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6254,7 +7167,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 147.32 59.69 0)
+			(at 128.27 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6433,8 +7346,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 168.91 53.34 0)
+		(lib_id "power:GND")
+		(at 199.39 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6443,31 +7356,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "adf02d35-bc30-4a0c-9913-05586944e5bd")
-		(property "Reference" "R7"
-			(at 171.45 52.0699 0)
+		(uuid "ad01ee62-3a63-4d96-a14a-58f5b0aa2cb2")
+		(property "Reference" "#PWR014"
+			(at 199.39 82.55 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "8k2Ω"
-			(at 171.45 54.6099 0)
+		(property "Value" "GND"
+			(at 199.39 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 167.132 53.34 90)
+			(at 199.39 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6478,7 +7390,86 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 53.34 0)
+			(at 199.39 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 199.39 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aae92d8d-8b93-4c9b-b482-4133f869e98b")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 149.86 44.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "adf02d35-bc30-4a0c-9913-05586944e5bd")
+		(property "Reference" "R6"
+			(at 152.4 43.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "8k2Ω"
+			(at 152.4 45.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.082 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6489,7 +7480,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 168.91 53.34 0)
+			(at 149.86 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6508,7 +7499,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "R7")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -6516,7 +7507,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 147.32 53.34 0)
+		(at 128.27 44.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6526,8 +7517,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b30cfbc3-dc92-4564-a259-d65768698950")
-		(property "Reference" "R4"
-			(at 149.86 52.0699 0)
+		(property "Reference" "R2"
+			(at 130.81 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6538,7 +7529,7 @@
 			)
 		)
 		(property "Value" "8k2Ω"
-			(at 149.86 54.6099 0)
+			(at 130.81 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6549,7 +7540,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 145.542 53.34 90)
+			(at 126.492 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6560,7 +7551,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 53.34 0)
+			(at 128.27 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6571,7 +7562,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 147.32 53.34 0)
+			(at 128.27 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6590,7 +7581,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "R4")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -7180,7 +8171,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "db11f221-5ad5-4dae-97c4-c715d34018d5")
-		(property "Reference" "R5"
+		(property "Reference" "R7"
 			(at 154.94 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7244,7 +8235,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "R5")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -7262,7 +8253,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0ffdef9-3958-4c7f-8ff7-eecd99d9ea46")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR011"
 			(at 152.4 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -7322,7 +8313,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "#PWR010")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -7490,7 +8481,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 168.91 43.18 0)
+		(at 149.86 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7500,8 +8491,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "faaf925c-e94b-4338-aee2-d4d772af5624")
-		(property "Reference" "R6"
-			(at 171.45 41.9099 0)
+		(property "Reference" "R5"
+			(at 152.4 33.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7512,7 +8503,7 @@
 			)
 		)
 		(property "Value" "100kΩ"
-			(at 171.45 44.4499 0)
+			(at 152.4 35.5599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7523,7 +8514,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.132 43.18 90)
+			(at 148.082 34.29 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7534,7 +8525,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 43.18 0)
+			(at 149.86 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7545,7 +8536,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 168.91 43.18 0)
+			(at 149.86 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7564,7 +8555,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "R6")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -7660,7 +8651,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe8100b3-ab34-4095-8099-472da69c049d")
-		(property "Reference" "R1"
+		(property "Reference" "R3"
 			(at 133.35 129.54 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7722,7 +8713,7 @@
 		(instances
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
-					(reference "R1")
+					(reference "R3")
 					(unit 1)
 				)
 			)

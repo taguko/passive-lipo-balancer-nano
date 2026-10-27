@@ -28,7 +28,7 @@ void Balance_discharge() {
   }
 
   // dicharge cell
-  if (voltage_cell_min < voltage_cell[0]) digitalWrite(Sink_Cell1, HIGH);
-  if (voltage_cell_min < voltage_cell[1]) digitalWrite(Sink_Cell2, HIGH);
-  if (voltage_cell_min < voltage_cell[2]) digitalWrite(Sink_Cell3, HIGH);
+  if (voltage_cell_min * (1 + allowable_error) < voltage_cell[0]) digitalWrite(Sink_Cell1, HIGH);
+  if (voltage_cell_min * (1 + allowable_error) < voltage_cell[1]) digitalWrite(Sink_Cell2, HIGH);
+  if (voltage_cell_min * (1 + allowable_error) < voltage_cell[2]) digitalWrite(Sink_Cell3, HIGH);
 }
