@@ -7,6 +7,8 @@
 
 const float allowable_error = 0.005;
 
+const uint32_t cycle = 20;  // [ms]
+
 const float R1 = 100000;
 const float R2 = 8200;
 const float voltage_division_ratio = R2 / (R2 + R1);
@@ -49,16 +51,17 @@ void setup() {
 }
 
 void loop() {
+  uint32_t preMillis = millis();
+
   // Ready
-  digitalWrite(LED_BUILTIN, LOW);
   digitalWrite(Sink_Cell1, LOW);
   digitalWrite(Sink_Cell2, LOW);
   digitalWrite(Sink_Cell3, LOW);
 
   // Voltage check
   voltage_cell[0] = mapf(analogRead(V_Cell1), 0, 1023, 0, 1.1) / voltage_division_ratio;
-  voltage_cell[1] = (mapf(analogRead(V_Cell2), 0, 1023, 0, 1.1) / voltage_division_ratio) - voltage_cell[0];
-  voltage_cell[2] = (mapf(analogRead(V_Cell3), 0, 1023, 0, 1.1) / voltage_division_ratio) - (voltage_cell[0] + voltage_cell[1]);
+  voltage_cell[1] = mapf(analogRead(V_Cell2) - analogRead(V_Cell1), 0, 1023, 0, 1.1) / voltage_division_ratio;
+  voltage_cell[2] = mapf(analogRead(V_Cell3) - analogRead(V_Cell2), 0, 1023, 0, 1.1) / voltage_division_ratio;
   serial_handle();
   oled_handle();
 
@@ -69,21 +72,22 @@ void loop() {
     Balance_discharge();
 
   // Wait
-  delay(20);
+  while ((millis() - preMillis) < cycle)
+    ;
 }
 
 void serial_handle() {
   if (digitalRead(SW1) == HIGH)
-    Serial.println("Balance mode");
+    Serial.print("Balance mode ");
   else
-    Serial.println("Strage mode");
+    Serial.print("Storage mode ");
   String info;
-  info = "V_Cell1:" + String(voltage_cell[0]) + "V";
-  display.println(info);
-  info = "V_Cell2:" + String(voltage_cell[1]) + "V";
-  display.println(info);
+  info = "V_Cell1:" + String(voltage_cell[0]) + "V ";
+  Serial.print(info);
+  info = "V_Cell2:" + String(voltage_cell[1]) + "V ";
+  Serial.print(info);
   info = "V_Cell3:" + String(voltage_cell[2]) + "V";
-  display.println(info);
+  Serial.println(info);
 }
 
 float mapf(float x, float in_min, float in_max,

@@ -1,11 +1,15 @@
 // discharge handle
 
 void Storage_discharge() {
+  bool run_discharge = false;
+  
   // run discharge?
   for (int i = 0; i < 3; i++) {
     if (3.8 < voltage_cell[i])
-      digitalWrite(LED_BUILTIN, HIGH);
+      run_discharge = true;
   }
+  if (run_discharge) digitalWrite(LED_BUILTIN, HIGH);
+  else digitalWrite(LED_BUILTIN, LOW);
 
   // discharge cell
   if (3.8 < voltage_cell[0]) digitalWrite(Sink_Cell1, HIGH);
@@ -14,6 +18,8 @@ void Storage_discharge() {
 }
 
 void Balance_discharge() {
+  bool run_discharge = false;
+
   // find minimum(goal) valtage cell
   float voltage_cell_min = 4.2;
   for (int i = 0; i < 3; i++) {
@@ -24,8 +30,10 @@ void Balance_discharge() {
   // run discharge?
   for (int i = 0; i < 3; i++) {
     if (voltage_cell_min < voltage_cell[i])
-      digitalWrite(LED_BUILTIN, HIGH);
+      run_discharge = true;
   }
+  if (run_discharge) digitalWrite(LED_BUILTIN, HIGH);
+  else digitalWrite(LED_BUILTIN, LOW);
 
   // dicharge cell
   if (voltage_cell_min * (1 + allowable_error) < voltage_cell[0]) digitalWrite(Sink_Cell1, HIGH);
