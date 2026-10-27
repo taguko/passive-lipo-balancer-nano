@@ -15,7 +15,7 @@ void Storage_discharge() {
 
 void Balance_discharge() {
   // find minimum(goal) valtage cell
-  float voltage_cell_min = 0;
+  float voltage_cell_min = 4.2;
   for (int i = 0; i < 3; i++) {
     if (voltage_cell[i] < voltage_cell_min)
       voltage_cell_min = voltage_cell[i];
