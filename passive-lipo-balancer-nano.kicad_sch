@@ -874,6 +874,172 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:Jumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 2.794 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Jumper_2_Open"
+				(at 0 -2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Jumper, 2-pole, open"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_0_1"
+				(arc
+					(start -1.524 1.27)
+					(mid 0 1.778)
+					(end 1.524 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "MCU_Module:Arduino_Nano_v3.x"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2420,6 +2586,16 @@
 		)
 		(uuid "b1387a4a-7fb2-4114-ba62-eca9ea7e765a")
 	)
+	(text "JP1をショートして\nバッテリーから給電すると\nUSB給電なしで動作可能に"
+		(exclude_from_sim no)
+		(at 58.166 16.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "dded68bf-712e-4c70-88c9-48eb863fe3ca")
+	)
 	(text_box "ストレージモード：すべてのセルを3.8Vまで放電\nバランスモード：一番電圧の低いセルと同じ電圧まで放電"
 		(exclude_from_sim no)
 		(at 132.08 190.8571 0)
@@ -2627,6 +2803,12 @@
 		(uuid "c5dd2a34-cb96-40c2-abdf-0c7210c2304e")
 	)
 	(junction
+		(at 73.66 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "deefc96b-79d3-446a-9901-a736815552f2")
+	)
+	(junction
 		(at 152.4 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2683,10 +2865,6 @@
 	(no_connect
 		(at 63.5 60.96)
 		(uuid "586c6526-6154-4079-a86e-9290300c3142")
-	)
-	(no_connect
-		(at 73.66 27.94)
-		(uuid "80839bf0-0407-4a8c-9a95-09d6c45bf18c")
 	)
 	(no_connect
 		(at 63.5 63.5)
@@ -2755,6 +2933,16 @@
 			(type default)
 		)
 		(uuid "0a3c420e-4fea-40ed-9033-8e8f9fb89a60")
+	)
+	(wire
+		(pts
+			(xy 73.66 25.4) (xy 73.66 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d368073-6cb0-4bb6-b4c6-0a132464d4de")
 	)
 	(wire
 		(pts
@@ -2965,6 +3153,16 @@
 			(type default)
 		)
 		(uuid "49e9a797-b06d-419e-ace3-941af5e7ff81")
+	)
+	(wire
+		(pts
+			(xy 50.8 26.67) (xy 53.34 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5696eb70-3b95-46fa-a482-9a6cb96fee15")
 	)
 	(wire
 		(pts
@@ -3385,6 +3583,16 @@
 			(type default)
 		)
 		(uuid "9856bfd6-06de-4dc2-86e6-4d454b3f5016")
+	)
+	(wire
+		(pts
+			(xy 73.66 26.67) (xy 63.5 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98ef7835-b651-4eff-acd2-5d396d9c5c9f")
 	)
 	(wire
 		(pts
@@ -3829,6 +4037,30 @@
 		(uuid "187b9310-04e4-4a9e-a449-400dfe474511")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 160.2401 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "Cell2+"
+		(shape input)
+		(at 50.8 26.67 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1b2942b6-fa7c-4bf6-9b39-a1bbdea483db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 41.3439 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7506,6 +7738,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 58.42 26.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b184aff3-0ad9-40a8-b45d-ac4544e2aec7")
+		(property "Reference" "JP1"
+			(at 58.42 20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 58.42 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_LCC:PLCC-84_29.3x29.3mm_P1.27mm"
+			(at 58.42 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 58.42 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "405d5861-d272-4c1d-afbf-864a61d4efe7")
+		)
+		(pin "1"
+			(uuid "de4651cd-9141-4675-b3b8-e5e9755f10bd")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 128.27 44.45 0)
 		(unit 1)
@@ -7826,6 +8138,84 @@
 			(project "passive-lipo-balancer-nano"
 				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 73.66 25.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c4b003b4-efe7-43d3-b2a7-7c24c92f66bb")
+		(property "Reference" "#FLG02"
+			(at 73.66 23.495 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 73.66 20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 73.66 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1c3e7e56-f13f-45d6-b9cf-01d08b7303eb")
+		)
+		(instances
+			(project "passive-lipo-balancer-nano"
+				(path "/72d8573a-db7d-420b-a0f0-68b69316f634"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
