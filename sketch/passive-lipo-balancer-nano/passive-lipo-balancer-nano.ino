@@ -5,6 +5,8 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+const float voltage_storage = 3.80;
+
 const float allowable_error = 0.005;
 
 const uint32_t cycle = 20;  // [ms]

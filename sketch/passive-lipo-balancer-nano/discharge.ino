@@ -5,16 +5,16 @@ void Storage_discharge() {
   
   // run discharge?
   for (int i = 0; i < 3; i++) {
-    if (3.8 < voltage_cell[i])
+    if (voltage_storage < voltage_cell[i])
       run_discharge = true;
   }
   if (run_discharge) digitalWrite(LED_BUILTIN, HIGH);
   else digitalWrite(LED_BUILTIN, LOW);
 
   // discharge cell
-  if (3.8 < voltage_cell[0]) digitalWrite(Sink_Cell1, HIGH);
-  if (3.8 < voltage_cell[1]) digitalWrite(Sink_Cell2, HIGH);
-  if (3.8 < voltage_cell[2]) digitalWrite(Sink_Cell3, HIGH);
+  if (voltage_storage < voltage_cell[0]) digitalWrite(Sink_Cell1, HIGH);
+  if (voltage_storage < voltage_cell[1]) digitalWrite(Sink_Cell2, HIGH);
+  if (voltage_storage < voltage_cell[2]) digitalWrite(Sink_Cell3, HIGH);
 }
 
 void Balance_discharge() {
