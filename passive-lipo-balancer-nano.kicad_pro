@@ -172,6 +172,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -183,6 +184,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -194,6 +196,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -240,7 +243,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "${REVISION}"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -466,9 +469,10 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -516,8 +520,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -681,7 +685,7 @@
         "uuid": "72d8573a-db7d-420b-a0f0-68b69316f634"
       }
     ],
-    "used_designators": "Cell1-3,#FLG1-2,R1-17,J1-5,BZ1,JP1,#PWR1-17,C1-9,A1,Q1-3,U1,SW1",
+    "used_designators": "#FLG1-2,#PWR1-17,A1,BZ1,C1-9,Cell1-3,J1-5,JP1,Q1-3,R1-17,SW1,U1",
     "variants": []
   },
   "sheets": [
@@ -690,7 +694,9 @@
       "ルート"
     ]
   ],
-  "text_variables": {},
+  "text_variables": {
+    "REVISION": "1.0.0"
+  },
   "tuning_profiles": {
     "meta": {
       "version": 0
