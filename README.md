@@ -33,6 +33,125 @@ The goal of this project is to provide a simple and easy-to-understand platform 
 - Battery balance connector
 - Status OLED (optional)
 
+### Mermaid
+
+##### Circuit Architecture
+
+The Arduino Nano is powered directly from the Cell2+ node (approximately 7.4–8.4 V) through VIN when JP1 is installed. Cell voltages are measured through resistor dividers, while individual cells are balanced by switching dedicated MOSFET-resistor discharge paths.
+
+```mermaid
+flowchart LR
+
+    Battery["2S / 3S LiPo Battery Pack"]
+
+    Cell2["Cell2+"]
+
+    JP1["Power Select Jumper"]
+
+    subgraph Arduino["Arduino Nano"]
+        VIN["VIN"]
+
+        MCU["ATmega328P"]
+
+        ADC["ADC Inputs<br/>A0, A1, A2"]
+
+        CTRL["D2, D3, D4"]
+
+        I2C["I²C"]
+    end
+
+    subgraph Sense["Voltage Sensing"]
+        VS1["Cell1 Divider"]
+        VS2["Cell1+Cell2 Divider"]
+        VS3["Cell1+Cell2+Cell3 Divider"]
+    end
+
+    subgraph Balance["Passive Balancing"]
+        B1["33Ω + NMOS<br/>Cell1"]
+        B2["33Ω + NMOS<br/>Cell2"]
+        B3["33Ω + NMOS<br/>Cell3"]
+    end
+
+    OLED["OLED Display"]
+    SW["Mode Switch"]
+
+    Battery --> VS1
+    Battery --> VS2
+    Battery --> VS3
+
+    VS1 --> ADC
+    VS2 --> ADC
+    VS3 --> ADC
+
+    CTRL --> B1
+    CTRL --> B2
+    CTRL --> B3
+
+    I2C <--> OLED
+
+    SW --> MCU
+
+    Cell2 --> JP1
+    JP1 --> VIN
+```
+
+#### Control Flow
+
+```mermaid
+flowchart TD
+
+    START([Loop Start])
+
+    OFF["Turn All Discharge MOSFETs OFF"]
+
+    MEASURE["Measure A0, A1, A2"]
+
+    CALC["Calculate Individual Cell Voltages<br/><br/>Cell1 = A0<br/>Cell2 = A1 - A0<br/>Cell3 = A2 - A1"]
+
+    DISPLAY["Update Serial Output<br/>and OLED Display"]
+
+    MODE{"Mode Switch"}
+
+    STORAGE["Storage_discharge()"]
+
+    BALANCE["Balance_discharge()"]
+
+    WAIT["Wait Until 20 ms Cycle Elapses"]
+
+    START --> OFF
+    OFF --> MEASURE
+    MEASURE --> CALC
+    CALC --> DISPLAY
+    DISPLAY --> MODE
+
+    MODE -->|HIGH| STORAGE
+    MODE -->|LOW| BALANCE
+
+    STORAGE --> WAIT
+    BALANCE --> WAIT
+
+    WAIT --> START
+```
+
+#### Cell Voltage Reconstruction
+```mermaid
+flowchart LR
+
+    A0["ADC A0<br/>Cell1"]
+    A1["ADC A1<br/>Cell1 + Cell2"]
+    A2["ADC A2<br/>Cell1 + Cell2 + Cell3"]
+
+    C1["Cell1 Voltage"]
+    C2["Cell2 Voltage"]
+    C3["Cell3 Voltage"]
+
+    A0 -->|"Direct"| C1
+
+    A1 -->|"A1 - A0"| C2
+
+    A2 -->|"A2 - A1"| C3
+```
+
 ### BOM
 [PartsCabi.net](https://partscabi.net/list/e6f96d02-e6a8-4c4d-9230-7bf2f09aacb4)
 
