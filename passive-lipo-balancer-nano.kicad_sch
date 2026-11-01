@@ -5,8 +5,8 @@
 	(uuid "72d8573a-db7d-420b-a0f0-68b69316f634")
 	(paper "A4")
 	(title_block
-		(date "2026-10-27")
-		(rev "${REVISION}")
+		(date "2026-11-01")
+		(rev "${REV}")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x03"
