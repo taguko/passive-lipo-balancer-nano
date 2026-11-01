@@ -37,62 +37,67 @@ The goal of this project is to provide a simple and easy-to-understand platform 
 
 ##### Circuit Architecture
 
-The Arduino Nano is powered directly from the Cell2+ node (approximately 7.4–8.4 V) through VIN when JP1 is installed. Cell voltages are measured through resistor dividers, while individual cells are balanced by switching dedicated MOSFET-resistor discharge paths.
+The Arduino Nano can be powered from USB at any time. When JP1 is installed, the Cell2+ node (approximately 7.4–8.4 V) is additionally connected to the Nano VIN pin, allowing standalone operation from the battery pack. USB power remains available regardless of the JP1 setting.
+
+Cell voltages are measured through resistor dividers, while individual cells are balanced by switching dedicated MOSFET-resistor discharge paths.
 
 ```mermaid
 flowchart LR
 
-    Battery["2S / 3S LiPo Battery Pack"]
+    USB["USB 5 V"]
 
-    Cell2["Cell2+"]
+    Battery["2S / 3S LiPo Pack"]
+    Cell2["Cell2+<br/>(≈7.4–8.4 V)"]
 
-    JP1["Power Select Jumper"]
+    JP1["JP1"]
 
-    subgraph Arduino["Arduino Nano"]
+    subgraph Nano["Arduino Nano"]
+        USB5V["USB Power Input"]
         VIN["VIN"]
 
         MCU["ATmega328P"]
 
-        ADC["ADC Inputs<br/>A0, A1, A2"]
+        ADC["ADC Inputs<br/>A0-A2"]
 
-        CTRL["D2, D3, D4"]
+        CTRL["Balancing Outputs<br/>D2-D4"]
 
         I2C["I²C"]
     end
 
     subgraph Sense["Voltage Sensing"]
-        VS1["Cell1 Divider"]
-        VS2["Cell1+Cell2 Divider"]
-        VS3["Cell1+Cell2+Cell3 Divider"]
+        V1["Cell1 Divider"]
+        V2["Cell1+Cell2 Divider"]
+        V3["Cell1+Cell2+Cell3 Divider"]
     end
 
     subgraph Balance["Passive Balancing"]
-        B1["33Ω + NMOS<br/>Cell1"]
-        B2["33Ω + NMOS<br/>Cell2"]
-        B3["33Ω + NMOS<br/>Cell3"]
+        B1["Cell1<br/>33Ω + NMOS"]
+        B2["Cell2<br/>33Ω + NMOS"]
+        B3["Cell3<br/>33Ω + NMOS"]
     end
 
     OLED["OLED Display"]
     SW["Mode Switch"]
 
-    Battery --> VS1
-    Battery --> VS2
-    Battery --> VS3
+    USB --> USB5V
 
-    VS1 --> ADC
-    VS2 --> ADC
-    VS3 --> ADC
+    Cell2 --> JP1
+    JP1 --> VIN
+
+    Battery --> V1
+    Battery --> V2
+    Battery --> V3
+
+    V1 --> ADC
+    V2 --> ADC
+    V3 --> ADC
 
     CTRL --> B1
     CTRL --> B2
     CTRL --> B3
 
     I2C <--> OLED
-
     SW --> MCU
-
-    Cell2 --> JP1
-    JP1 --> VIN
 ```
 
 #### Control Flow
