@@ -33,9 +33,7 @@ The goal of this project is to provide a simple and easy-to-understand platform 
 - Battery balance connector
 - Status OLED (optional)
 
-### Mermaid
-
-##### Circuit Architecture
+#### Circuit Architecture
 
 The Arduino Nano can be powered from USB at any time. When JP1 is installed, the Cell2+ node (approximately 7.4–8.4 V) is additionally connected to the Nano VIN pin, allowing standalone operation from the battery pack. USB power remains available regardless of the JP1 setting.
 
@@ -100,7 +98,7 @@ flowchart LR
     SW --> MCU
 ```
 
-#### Control Flow
+### Control Flow
 
 ```mermaid
 flowchart TD
@@ -138,7 +136,7 @@ flowchart TD
     WAIT --> START
 ```
 
-#### Cell Voltage Reconstruction
+### Cell Voltage Reconstruction
 ```mermaid
 flowchart LR
 
